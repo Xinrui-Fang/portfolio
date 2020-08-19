@@ -18,6 +18,7 @@
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
+  --h3-font-size: 1.15rem;
   --normal-font-size: 0.938rem;
 }
 @media screen and (min-width: 768px){
@@ -82,17 +83,26 @@ img{
 /*===== LAYOUT =====*/
 .banner{
   margin-top: 0;
+  position: relative;
+}
+.bx-x{
+  font-size: 3rem;
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
 }
 
 /*===== INTRODUCION =====*/
 
 .intro-content{
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  justify-items: center;
 }
 .intro-item{
-	margin: 0 1.5rem;
-	width: 15rem;
+	
+	width: 10rem;
 }
 .intro-title{
 	margin-bottom: var(--mb-1);
@@ -131,8 +141,11 @@ img{
 }
 
 header{
+  width: 100%;
 	text-align: center;
+  margin: 0 auto;
 	margin-bottom: 30px;
+
 }
 
 h1{
@@ -151,8 +164,11 @@ iframe{
   margin-bottom: var(--mb-6);
 }
 
+/*=====USABILITY TEST=====*/
+/*
 .lookup{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -161,6 +177,37 @@ iframe{
 }
 li{
   margin-bottom: var(--mb-1);
+  margin-left: var(--mb-1);
+}
+*/
+
+
+p{
+  margin-bottom: var(--mb-6);
+  font-size: var(--normal-font-size);
+}
+section{
+  width: 90%;
+  margin: 0 auto;
+}
+.reserach-block{
+  font-style: italic;
+  background: lightgrey;
+}
+.findings{
+  margin-bottom: var(--mb-1);
+}
+.margin-1{
+  margin-bottom: var(--mb-1);
+}
+.p-margin{
+   margin-bottom: var(--mb-3);
+}
+.sketchImg{
+  margin-bottom: var(--mb-3);
+}
+.miro, .figma{
+  width: 100%;
 }
 
 @media screen and (min-width: 768px){
@@ -172,9 +219,17 @@ li{
     font-size: var(--normal-font-size);
 	}
 	section{
-	width: 90%;
+	width: 70%;
 	margin: 0 auto;
 	}
+  /*===== Cloes =====*/
+  .bx-x{
+  font-size: 4rem;
+  position: fixed;
+  top: .3rem;
+  right: .3rem;
+  }
+
   .reserach-block{
     font-style: italic;
     background: lightgrey;
@@ -193,6 +248,28 @@ li{
   }
   .miro, .figma{
     width: 100%;
+  }
+
+  /*=====USABILITY TEST=====*/
+  .lookup{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .lookup-img{
+    margin-right: var(--mb-4);
+  }
+  li{
+    margin-bottom: var(--mb-1);
+  }
+
+  /*=====INTRODUCTION=====*/
+  .intro-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .intro-item{
+    width: 10rem;
   }
 
 }

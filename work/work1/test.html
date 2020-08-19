@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+	.container{
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+  		grid-template-rows: repeat(2, 50%);
+  		justify-items: center;
+	}
+	.item{
+		width: 100px;
+		height: 100px;
+		background: red;
+		margin: 10px;
+	}
+</style>
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>
-		div{
-			height: 465px;
-			background-image: url(http://img.smyhvae.com/20170813_1053.jpg);
-			background-position: center center;
-		}
-	</style>
 </head>
 <body>
-	<div>
-		
+	<div class="container">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
 	</div>
 </body>
 </html>
